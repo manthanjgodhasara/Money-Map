@@ -20,6 +20,7 @@ const Signup = () => {
   }
 
   return (
+
     <div className="login_container signup_container_height">
       <div className="login_container_left">
         <div className="title">
@@ -71,6 +72,7 @@ const Signup = () => {
       <div className="login_container_right signup_img_height">
         <img src={loginimg} />
       </div>
+
     </div>
   );
 }

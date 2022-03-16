@@ -1,16 +1,16 @@
-.dashboard_image{
+.landing_image{
   width: 500px;
   height: 80vh;
 }
 
-.dashboard_container_left{
+.landing_container_left{
   margin-left: 50px;
   flex: 1;
 }
 
-.dashboard_container{
+.landing_container{
   display: flex;
-  margin-top: 20px;
+  margin-top: 112px;
   align-items: center;
 }
 
