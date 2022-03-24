@@ -1,0 +1,31 @@
+.add_trans_container{
+  margin-top: 125px;
+  width: 350px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.trans_input_container{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 25px;
+  font-size: 18px;
+}
+
+.trans_input_field{
+  padding: 8px 13px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid black;
+  font-size: 15px;
+}
+
+.trans_btn{
+  margin: 40px 0;
+  padding: 8px  30px;
+}

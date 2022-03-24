@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import imagesvg from "../images/Landing svg.jpg"
+import imagesvg from "../images/landing svg3.svg"
 import './Landing.css'
 import {GoGraph} from 'react-icons/go'
 import {FcCompactCamera} from 'react-icons/fc'
@@ -12,17 +12,18 @@ const Landing = () => {
   useEffect(()=>{
     Aos.init({duration: 1000})
   }, [])
+  
   return (
     <>
       <div className="landing_container">
         <div className="landing_container_left" data-aos="fade-right">
           <h1
-            style={{ fontFamily: "sans-serif", fontSize: 80, color: "#0a65a4" }}
+            style={{ fontFamily: "sans-serif", fontSize: 75, color: "#0a65a4" }}
           >
             Managing money,
           </h1>
           <h1
-            style={{ fontFamily: "sans-serif", fontSize: 70, color: "#6fbbd3" }}
+            style={{ fontFamily: "sans-serif", fontSize: 65, color: "#6fbbd3" }}
           >
             made simple
           </h1>

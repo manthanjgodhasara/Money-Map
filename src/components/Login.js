@@ -1,11 +1,13 @@
-import React,{useState} from 'react'
+import React,{useContext, useState} from 'react'
 import { Link } from 'react-router-dom'
 import './Login.css'
 import loginimg from '../images/login svg.jpg'
+import { GlobalContext } from '../context/globalState'
 
 
 const Login = () => {
   const [loginUser,setLoginUser] = useState({email:"", password:""})
+  const {setLoggedIn} = useContext(GlobalContext)
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -17,6 +19,7 @@ const Login = () => {
   const handleSubmit = (e) =>{
     e.preventDefault();
     setLoginUser({email: "", password: ""});
+    setLoggedIn()
   }
 
   return (

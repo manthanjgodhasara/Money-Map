@@ -3,18 +3,25 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Landing from "./components/Landing";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Dashboard from "./components/Dashboard";
+import { GlobalProvider } from "./context/globalState";
+import AddTrans from "./components/AddTrans";
 
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Landing/>} />
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/signup" element={<Signup/>}/>
-      </Routes>
-    </Router>
+    <GlobalProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/addtrans" element={<AddTrans />} />
+        </Routes>
+      </Router>
+    </GlobalProvider>
   );
 }
 
