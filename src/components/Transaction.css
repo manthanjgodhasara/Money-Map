@@ -1,7 +1,7 @@
 .transaction_container{
   background-color: #dbf3fa;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 10px;
   margin: 20px;
   border-radius: 5px;
@@ -10,10 +10,20 @@
   transition: transform 250ms ease-in-out;
 }
 
+.transaction_amount{
+  margin-right: 30px;
+}
+
 .transaction_container:hover{
   transform: scale(1.02);
   cursor: pointer;
   box-shadow: 0 0 5px;
+}
+
+.icon_container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .icon{

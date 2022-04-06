@@ -6,7 +6,7 @@ import Signup from "./components/Signup";
 import Dashboard from "./components/Dashboard";
 import { GlobalProvider } from "./context/globalState";
 import AddTrans from "./components/AddTrans";
-
+import History from "./components/History";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/addtrans" element={<AddTrans />} />
+          <Route path="/history" element={<History />} />
         </Routes>
       </Router>
     </GlobalProvider>

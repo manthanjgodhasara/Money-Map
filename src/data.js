@@ -1,0 +1,58 @@
+export const data = [
+  {
+    id: "1",
+    name: "Meat",
+    category: "nonveg",
+    date: "2022-03-26",
+    amount: "+300",
+  },
+  {
+    id: "2",
+    name: "Egg",
+    category: "dairy",
+    date: "2022-03-26",
+    amount: "-60",
+  },
+  {
+    id: "3",
+    name: "T-shirt",
+    category: "clothing",
+    date: "2022-03-26",
+    amount: "+800",
+  },
+  {
+    id: "4",
+    name: "Puma Shoes",
+    category: "footwear",
+    date: "2022-03-26",
+    amount: "+3000",
+  },
+  {
+    id: "5",
+    name: "Wheat Flour",
+    category: "flour",
+    date: "2022-03-26",
+    amount: "+420",
+  },
+  {
+    id: "6",
+    name: "Tomato",
+    category: "vegetables",
+    date: "2022-03-26",
+    amount: "-150",
+  },
+  {
+    id: "7",
+    name: "Bangles",
+    category: "ornaments",
+    date: "2022-03-26",
+    amount: "+200",
+  },
+  {
+    id: "8",
+    name: "Purse",
+    category: "bags",
+    date: "2022-03-26",
+    amount: "-5000",
+  },
+];

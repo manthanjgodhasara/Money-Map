@@ -4,10 +4,17 @@ import { useNavigate } from "react-router-dom";
 import './AddTrans.css'
 
 const AddTrans = () => {
-  const [trans, setTrans] = useState({id: '', name:'',category:'',date:'',amount:''})
-  const { addTransaction } = useContext(GlobalContext);
+  const {
+    addTransaction,
+    isEditing,
+    editTrans,
+    editId,
+    transactions,
+    setTransactions,
+    notEditing,
+  } = useContext(GlobalContext);
+  const [trans, setTrans] = useState(editTrans)
   const nav = useNavigate();
-
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -22,8 +29,17 @@ const AddTrans = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(parseInt(trans.amount));
-    addTransaction({...trans, id: new Date().getTime().toString()});
+    if(isEditing){
+      setTransactions(transactions.map((transaction)=>{
+        if(transaction.id === editId){
+          return {...trans}
+        }
+      }))
+      notEditing()
+    }
+    else{
+      addTransaction({ ...trans, id: new Date().getTime().toString()});
+    }
     setTrans({id: '', name: "", category: "", date: "", amount: ''});
     nav("/dashboard");
   };
@@ -31,7 +47,9 @@ const AddTrans = () => {
   return (
     <div className="add_trans_container">
       <form className="add_trans_form" onSubmit={handleSubmit}>
-        <h1 className="trans_title">Add transaction</h1>
+        <h1 className="trans_title">
+          {isEditing ? "Edit" : "Add"} Transaction
+        </h1>
         <div className="trans_input_container">
           <label>Name: </label>
           <input
@@ -82,7 +100,8 @@ const AddTrans = () => {
           />
         </div>
         <button type="submit" className="btn trans_btn">
-          Add transaction
+          {isEditing ? "Edit " : "Add "}
+          Transaction
         </button>
       </form>
     </div>

@@ -60,6 +60,11 @@ const Navbar = () => {
             )}
             {loggedIn && (
               <li>
+                <Link to="/history">History</Link>
+              </li>
+            )}
+            {loggedIn && (
+              <li>
                 <Link to="/signup">Logout</Link>
               </li>
             )}
